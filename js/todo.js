@@ -32,6 +32,7 @@ function paintToDo(newTodo) {
 
 function handleToDoSubmit(event) {
   event.preventDefault();
+  localStorage.setItem(TODOS_KEY, JSON.stringify(""));
   const newTodo = toDoInput.value;
   toDoInput.value = "";
   const newTodoObj = {
