@@ -61,6 +61,7 @@ if(saveToDos != null){
     const parsedToDos = JSON.parse(savedToDos); // 객체로 만들기
     toDos = parsedToDos;
     parsedToDos.forEach(painToDo);
+    
 } 
 
 
