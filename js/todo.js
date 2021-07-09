@@ -57,10 +57,12 @@ toDoForm.addEventListener("submit", handleToDoSubmit);
 // 로컬 스토리지에 저장된 리스트 가져오기
 const savedToDos = localStorage.getItem(TODOS_KEY);
 // JSON.parse 형변환과 동시에 배열 만들기
-if(saveToDos !== null){
+if(saveToDos?.length){
+} else {
     const parsedToDos = JSON.parse(savedToDos); // 객체로 만들기
     toDos = parsedToDos;
     parsedToDos.forEach(painToDo);
+
 }
     // parsedToDos.forEach((item) => console.log("this is turn of" , item));
     //             .forEach(함수) 각각의 아이템들 에게 함 수 1번씩 실행
